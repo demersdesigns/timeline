@@ -1,4 +1,24 @@
 //Main content stylesheet
+
+//Week positions
+$positions: (
+first: 0,
+second: 64px,
+third: 128px,
+fourth: 192px,
+fifth: 256px,
+sixth: 320px,
+seventh: 384px,
+eighth: 448px,
+ninth: 512px,
+tenth: 576px,
+eleventh: 640px,
+twelfth: 704px,
+thirteenth: 768px,
+fourteenth: 896px
+);
+
+
 #timeline{
   width: 100%;
   height: 100%;
@@ -25,26 +45,211 @@
   stroke:#A6A8AB;
   stroke-width:2;
   stroke-miterlimit:10;
+
+  .active &{
+    fill: #999;
+  }
 }
 
-.week-number{ fill:#999999; }
+.week-number{
+  fill:#999999;
+
+  .active &{
+    fill: #fff;
+  }
+}
 
 .phase-label{ font-size:22px; }
 
-.template-path{ fill:#FCB64E; }
+.path{
+  transition: all 1s ease;
+}
 
-.template-dot{ fill:#FAA629; }
+.template-path,
+.design-path,
+.arch-path,
+.research-path{
+  stroke:#FFFFFF;
+  stroke-width:2;
+}
 
-.design-path{ fill:#BFCA33; }
+.template-path{
+  fill:#FCB64E;
+}
 
-.design-dot{ fill:#AFB436; }
+.design-path{
+  fill:#BFCA33;
+}
 
-.arch-path{ fill:#70B2E2; }
+.arch-path{
+  fill:#70B2E2;
+}
 
-.arch-dot{ fill:#57A0D7; }
+.research-path{
+  fill:#4CB6AC;
+}
 
-.research-path{ fill:#4CB6AC; }
+.template-dot,
+.design-dot,
+.arch-dot,
+.research-dot,
+.journeys-dot{
+  transition: all .2s ease;
+  stroke:#FFFFFF;
+  stroke-width:2;
+}
 
-.research-dot{ fill:#25A69A; }
+.template-dot{
+  fill:#FAA629;
 
-.journeys-dot{ fill:#C694C3; }
+  .first-week &,
+  .second-week &,
+  .third-week &
+  .fourth-week &,
+  .fifth-week &,
+  .sixth-week &,
+  .seventh-week &,
+  .eighth-week &,
+  .ninth-week &,
+  .tenth-week &,
+  .eleventh-week &,
+  .twelfth-week &{
+    transform: translateX( map-get($positions, first) );
+  }
+
+  .twelfth-week &{
+    transform: translateX( map-get($positions, second) );
+  }
+
+  .thirteenth-week &{
+    transform: translateX( map-get($positions, third) );
+  }
+
+  .fourteenth-week &{
+    transform: translateX( map-get($positions, fourth) );
+  }
+
+  .fifteenth-week &{
+    transform: translateX( map-get($positions, fifth) );
+  }
+}
+
+.design-dot{
+  fill:#AFB436;
+
+  .first-week &,
+  .second-week &,
+  .third-week &{
+    transform: translateX( map-get($positions, first) );
+  }
+
+  .fourth-week &{
+    transform: translateX( map-get($positions, second) );
+  }
+
+  .fifth-week &{
+    transform: translateX( map-get($positions, third) );
+  }
+
+  .sixth-week &{
+    transform: translateX( map-get($positions, fourth) );
+  }
+
+  .seventh-week &{
+    transform: translateX( map-get($positions, fifth) );
+  }
+
+  .eighth-week &{
+    transform: translateX( map-get($positions, sixth) );
+  }
+
+  .ninth-week &{
+    transform: translateX( map-get($positions, seventh) );
+  }
+
+  .tenth-week &{
+    transform: translateX( map-get($positions, eighth) );
+  }
+
+  .eleventh-week &{
+    transform: translateX( map-get($positions, ninth) );
+  }
+
+  .twelfth-week &,
+  .thirteenth-week &,
+  .fourteenth-week &,
+  .fifteenth-week &{
+    transform: translateX( map-get($positions, tenth) );
+  }
+}
+
+.arch-dot{
+  fill:#57A0D7;
+  .first-week &,
+  .second-week &,
+  .third-week &,
+  .fourth-week &{
+    transform: translateX( map-get($positions, first) );
+  }
+
+  .fifth-week &{
+    transform: translateX( map-get($positions, second) );
+  }
+
+  .sixth-week &{
+    transform: translateX( map-get($positions, third) );
+  }
+
+  .seventh-week &{
+    transform: translateX( map-get($positions, fourth) );
+  }
+
+  .eighth-week &,
+  .ninth-week &,
+  .tenth-week &,
+  .eleventh-week &,
+  .twelfth-week &,
+  .thirteenth-week &,
+  .fourteenth-week &,
+  .fifteenth-week &{
+    transform: translateX( map-get($positions, fifth) );
+  }
+}
+
+.research-dot{
+  fill:#25A69A;
+
+  .first-week &,
+  .second-week &,
+  .third-week &{
+    transform: translateX( map-get($positions, first) );
+  }
+
+  .third-week &{
+    transform: translateX( map-get($positions, second) );
+  }
+
+  .fourth-week &{
+    transform: translateX( map-get($positions, third) );
+  }
+
+  .fifth-week &,
+  .sixth-week &,
+  .seventh-week &,
+  .eighth-week &,
+  .ninth-week &,
+  .tenth-week &,
+  .eleventh-week &,
+  .twelfth-week &,
+  .thirteenth-week &,
+  .fourteenth-week &,
+  .fifteenth-week &{
+    transform: translateX( map-get($positions, fourth) );
+  }
+}
+
+.journeys-dot{
+  fill:#C694C3;
+}
+
+

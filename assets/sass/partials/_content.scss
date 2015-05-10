@@ -1,0 +1,50 @@
+//Main content stylesheet
+#timeline{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  font-size:26px;
+  fill:#231F20;
+}
+
+.subhead{
+  font-family:'Nunito-Light';
+  font-size: 18px;
+}
+
+.weeks-line{
+  fill:none;
+  stroke:#999999;
+  stroke-width:2;
+  stroke-miterlimit:10;
+}
+
+.week-fill{
+  fill:#fff;
+  stroke:#A6A8AB;
+  stroke-width:2;
+  stroke-miterlimit:10;
+}
+
+.week-number{ fill:#999999; }
+
+.phase-label{ font-size:22px; }
+
+.template-path{ fill:#FCB64E; }
+
+.template-dot{ fill:#FAA629; }
+
+.design-path{ fill:#BFCA33; }
+
+.design-dot{ fill:#AFB436; }
+
+.arch-path{ fill:#70B2E2; }
+
+.arch-dot{ fill:#57A0D7; }
+
+.research-path{ fill:#4CB6AC; }
+
+.research-dot{ fill:#25A69A; }
+
+.journeys-dot{ fill:#C694C3; }
